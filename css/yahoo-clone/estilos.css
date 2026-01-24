@@ -1,0 +1,171 @@
+/*creamos variables para los colores*/
+:root{
+    --color-negro: #232a31;
+    --color-azul: #1A0dab;
+    --color-gris: #525252;
+    --color-gris-5b: #5252525b; /*5b | opacidad*/
+}
+
+/*reinicializamos los ajustes*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*para q respete el tamaño cuando ocupamos margin, padding y border*/
+    text-decoration: none; /*quita los estilos por defecto de los enlaces*/
+}
+
+body{
+    font-family: Arial, Helvetica;
+    height: 100vh;
+    width: 100%; /*para ocupar el 100% de la pantalla*/
+    display: flex; /*para q el contenido sea flexible*/
+    flex-direction: column; /*para q el contenido se alinee en una columna*/
+    justify-content: space-between; /*añade espaciado entre el contenido*/
+}
+
+header{
+    height: 60px;
+    width: 100%;
+    padding: 10px 40px;
+    display: flex; /*para q el contenido sea flexible*/
+    justify-content: space-between;
+}
+
+header nav{
+    display: flex; /*para q el contenido sea flexible*/
+    column-gap: 20px; /*espacio entre elementos*/
+}
+/*Contenido principal*/
+main{ /*esta alineandose como hijo de body es decir ocupa el flex del body*/
+    text-align: center; /*centra el texto*/
+    width: 600px;
+    align-self: center; /*centra el contenido*/
+}
+
+main .header h2{
+    font-weight: normal; /*quita la negrita*/
+    font-size: 40px;
+    color: var(--color-negro); /*color del texto ocupamos la variable*/
+    margin-bottom: 15px;
+}
+
+main .header p{
+    color: var(--color-negro);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+main .header a{
+    color: var(--color-azul);
+    font-size: 14px;
+    font-weight: bold; /*negrita*/
+}
+
+main .header a:hover{
+    text-decoration: underline; /*para la linea del enlace*/
+}
+
+main .buscador label{
+    display: flex;
+    align-items: center; /*align-items | los elementos ocupan el espacio necesario de su contenedor en este 
+    caso el label ocupa el espacio necesario del contendor*/
+    width: 100%;
+    column-gap: 15px; /*espaciado entre elementos del label*/
+
+    padding: 10px 15px;
+    border: 1px solid var(--color-gris-5b);
+    box-shadow: 0 1px 1px var(--color-gris-5b); /*añade sombreado*/
+    border-radius: 100px;
+}
+
+main .buscador label:hover{ /*efecto cuando se pasa el cursor*/
+    box-shadow: 0 1px 4px var(--color-gris-5b); /*aumenta el sombreado*/
+}
+
+main .buscador input{
+    flex: 1; /* hace que los elementos no respeten su ancho para abarcar todo el contenedor*/
+    border: none; /*quita lo bordes del input*/
+    font-size: 18px;
+    color: var(--color-gris);
+    border-right: 1px solid var(--color-gris-5b);
+}
+
+main .buscador input:focus{
+    outline: none; /*elimina el efecto de los bordes q aparecen al seleccionar el elemento*/
+}
+
+/*Seccion de tendencias*/
+main .tendencias{
+    display: flex;
+    justify-content: center; /*alinea al centro el contenido*/ 
+    margin-top: 40px;
+    text-align: start; /*alinea a la izquierda el texto*/
+}
+
+main .tendencias-contenido{
+    padding: 16px;
+    border: 1px solid var(--color-gris-5b); /*añade bordes*/
+    border-radius: 8px; /*redondea el borde*/
+}
+
+main .tendencias-contenido h3{
+    font-weight: normal; /*quita la negrita*/
+    color: #232a31;
+}
+
+main .tendencias-contenido ol{
+    padding-left: 25px;
+    margin-top: 20px;
+    height: 200px;
+    width: 442px;
+    display: flex; /*para q el contenido sea flexible*/
+    flex-flow: column wrap; /*wrap | permite que los elementos se acomoden en otra linea respetando su ancho*/
+    gap: 20px; /* para añadir espaciado entre elementos */
+
+}
+
+main .tendencias-contenido a{
+    display: inline-block; /*Hace q el elemento se comporta como un bloque en linea, permitiendo definir dimensiones (como widht y height) sin ocupar toda la linea*/
+    width: 180px;
+    overflow: hidden; /*oculta cualquier contenido q sobresalga del area definida por width o height*/
+    text-wrap: nowrap; /*evita q el texto se divida en multiples lineas, forzandola a permanecer en una sola linea*/
+    text-overflow: ellipsis; /*si el texto es demasiado largo y esta oculto por overflow: hidden, muestra puntos suspesivos al final*/
+    vertical-align: bottom; /*alinea el elemento al borde inferior respecto a otros elementos en linea*/
+    color: var(--color-azul);
+}
+
+main .tendencias-contenido a:hover{
+    text-decoration: underline; /*coloca los estilos por defecto de los enlaces*/
+}
+
+/*Footer*/
+footer{
+    border-top: 1px solid var(--color-gris-5b); /*borde superior*/
+    padding: 10px 40px;
+    display: flex; /*para q el contenido sea flexible*/
+    justify-content: center; /* justify-content | para alinear elementos de forma horizontal cuando es flex-direction: row*/
+    align-items: center; /*center | posiciona al centro los elementos*/
+}
+
+footer ul{
+    list-style: none; /*elimina las viñetas q vienen por defecto*/
+    flex: 1; /*flex-grow: 1; | hace que los elementos no respeten su ancho para abarcar todo el contenedor */
+    display: flex; /*para q el contenido sea flexible*/
+    justify-content: center; /** justify-content | para alinear elementos de forma horizontal*/
+    gap: 20px; /*añade un espaciado entre los elementos*/
+}
+
+footer .ajustes{
+    display: flex; /*para q el contenido sea flexible*/
+    align-items: center; /*center | posiciona al centro los elementos*/
+    gap: 10px; /*añade un espaciado entre los elementos*/
+}
+
+footer a{
+    color: var(--color-gris);
+    font-size: 14px;
+}
+
+footer a:hover{
+    color: var(--color-azul);
+}

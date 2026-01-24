@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EDU-PATH</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" href="assets/boxicons-2.1.4/css/boxicons.min.css" />
+    <!--iconos-->
+  </head>
+  <body>
+    <!--htmlcolorcodes | para seleccionar paleta de colores-->
+    <!--fuentes rubik - roboto-->
+    <!--En la metodologia BEM trabajamos en: bloque -> elemento -modificadores-->
+    <!--En BEM tambien se puede crear carpetas y archivos por bloque-->
+
+    <header class="header">
+      <div class="header__container">
+        <nav class="header__navbar navbar">
+          <a href="" class="navbar__logo logo">
+            <i class="bx bxs-institution logo__icon"></i>
+            <span class="logo__text">EduPath</span>
+          </a>
+
+          <input type="checkbox" name="menu-toggle" id="menu-toggle" hidden />
+          <label for="menu-toggle" class="navbar__menu-btn menu-btn">
+            <span class="menu-btn__line menu-btn__line--1"></span>
+            <span class="menu-btn__line menu-btn__line--2"></span>
+            <span class="menu-btn__line menu-btn__line--3"></span>
+          </label>
+
+          <div class="navbar__menu menu">
+            <a href="#" class="menu__link">Inicio</a>
+            <a href="#" class="menu__link">Cursos</a>
+            <a href="#" class="menu__link">Planes</a>
+            <a href="#" class="menu__link">Contactos</a>
+          </div>
+        </nav>
+
+        <section class="header__intro intro">
+          <h1 class="intro__title">Aprendizaje ilimitado a tu alcance</h1>
+          <p class="intro__desc">
+            Lorem ipsum dolor sit amet consectur, adipisicing elit. Maime nam
+            necessitatibus aut animi illo perferendis.COnsectetur, neque ut
+            milestiae similique optio recusandae accusantium nemo obcaecati quam
+            aperim velit a illo?
+          </p>
+
+          <div class="intro__features features">
+            <p class="features__item">
+              <i class="bx bxs-badge-check"></i>
+              <span>Aprende con expertos</span>
+            </p>
+            <p class="features__item">
+              <i class="bx bxs-badge-check"></i>
+              <span>Obtén certificado</span>
+            </p>
+            <p class="features__item">
+              <i class="bx bxs-badge-check"></i>
+              <span>Obtén membresía</span>
+            </p>
+          </div>
+
+          <div class="intro__actions actions">
+            <a href="" class="actions__start-button">Empezar ahora</a>
+            <button class="actions__play-btn play-btn">
+              <i class="bx bx-play-circle play-btn__icon"></i>
+              <span class="play-btn__text">Ver videos</span>
+            </button>
+          </div>
+        </section>
+      </div>
+    </header>
+
+    <section class="overview">
+      <div class="overview__container">
+        <div class="overview__stats stats">
+          <div class="stats__item stats__item--bg1">
+            <i class="bx bx-slideshow stats__icon"></i>
+            <p class="stats__text">
+              <span class="stats__number">+100</span>
+              <span class="stats__label">Cursos en Línea</span>
+            </p>
+          </div>
+          <div class="stats__item stats__item--bg2">
+            <i class="bx bxs-user stats__icon"></i>
+            <p class="stats__text">
+              <span class="stats__number">+10</span>
+              <span class="stats__label">Instructores Expertos</span>
+            </p>
+          </div>
+          <div class="stats__item stats__item--bg3">
+            <i class="bx bxs-graduation stats__icon"></i>
+            <p class="stats__text">
+              <span class="stats__number">+100K</span>
+              <span class="stats__label">Estudiantes</span>
+            </p>
+          </div>
+          <div class="stats__item stats__item--bg4">
+            <i class="bx bxs-badge-check stats__icon"></i>
+            <p class="stats__text">
+              <span class="stats__number">+10K</span>
+              <span class="stats__label">Cursos Certificados</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="overview__education education">
+          <h2 class="education__title2">
+            ¡No postergues más
+            <span class="education__title2-color">Tu Educación</span>
+          </h2>
+          <p class="education__desc1">
+            Domina la tecnología, consigue un mejor trabajo o crea tu propio
+            negocio.
+          </p>
+
+          <div class="education__content">
+            <div class="education__item">
+              <i class="bx bxs-book education__icon"></i>
+              <h4 class="education__item-title">Curso</h4>
+              <p class="education__item-desc">
+                Lorem ipsum dolor sit amet consectur adipisicing elit. Incidunt
+                temporibus auu assumenda quos ut.
+              </p>
+            </div>
+
+            <div class="education__item">
+              <i class="bx bxs-folder-open education__icon"></i>
+              <h4 class="education__item-title">Curso</h4>
+              <p class="education__item-desc">
+                Lorem ipsum dolor sit amet consectur adipisicing elit. Incidunt
+                temporibus auu assumenda quos ut.
+              </p>
+            </div>
+
+            <div class="education__item">
+              <i class="bx bx-list-ol education__icon"></i>
+              <h4 class="education__item-title">Curso</h4>
+              <p class="education__item-desc">
+                Lorem ipsum dolor sit amet consectur adipisicing elit. Incidunt
+                temporibus auu assumenda quos ut.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="courses">
+      <h2 class="courses__title2">
+        ¡Cursos
+        <span class="courses__title2-color">Más populares</span>
+      </h2>
+
+      <p class="courses__desc1">
+        Lorem ipsum dolor sit amet consectur, adipisicing elit. Maime nam
+        necessitatibus aut animi illo perferendis.COnsectetur, neque ut
+        milestiae similique optio recusandae accusantium nemo obcaecati quam
+        aperim velit a illo?
+      </p>
+
+      <div class="courses__container">
+        <a href="#" class="courses__course course">
+          <img
+            src="assets/images/course-01.jpg"
+            alt="Imagen de curso"
+            class="course__image"
+          />
+          <div class="course__text">
+            <h3 class="course__title">Título del curso se muestra aquí</h3>
+            <p class="course__desc">
+              Lorem ipsum dolor sit amet consectur, adipisicing elit. Maime nam
+              necessitatibus aut animi illo perferendis.COnsectetur, neque ut
+              milestiae similique optio recusandae
+            </p>
+          </div>
+
+          <div class="course__footer">
+            <p class="course__price">$40 USD</p>
+          </div>
+        </a>
+        <a href="#" class="courses__course course">
+          <img
+            src="assets/images/course-02.jpg"
+            alt="Imagen de curso"
+            class="course__image"
+          />
+          <div class="course__text">
+            <h3 class="course__title">Título del curso se muestra aquí</h3>
+            <p class="course__desc">
+              Lorem ipsum dolor sit amet consectur, adipisicing elit. Maime nam
+              necessitatibus aut animi illo perferendis.COnsectetur, neque ut
+              milestiae similique optio recusandae
+            </p>
+          </div>
+
+          <div class="course__footer">
+            <p class="course__price course__price--line">$40 USD</p>
+            <p class="course__price">$10 USD</p>
+          </div>
+        </a>
+        <a href="#" class="courses__course course">
+          <img
+            src="assets/images/course-03.jpg"
+            alt="Imagen de curso"
+            class="course__image"
+          />
+          <div class="course__text">
+            <h3 class="course__title">Título del curso se muestra aquí</h3>
+            <p class="course__desc">
+              Lorem ipsum dolor sit amet consectur, adipisicing elit. Maime nam
+              necessitatibus aut animi illo perferendis.COnsectetur, neque ut
+              milestiae similique optio recusandae
+            </p>
+          </div>
+
+          <div class="course__footer">
+            <p class="course__price">$40 USD</p>
+          </div>
+        </a>
+        <a href="#" class="courses__course course">
+          <img
+            src="assets/images/course-04.jpg"
+            alt="Imagen de curso"
+            class="course__image"
+          />
+          <div class="course__text">
+            <h3 class="course__title">Título del curso se muestra aquí</h3>
+            <p class="course__desc">
+              Lorem ipsum dolor sit amet consectur, adipisicing elit. Maime nam
+              necessitatibus aut animi illo perferendis.COnsectetur, neque ut
+              milestiae similique optio recusandae
+            </p>
+          </div>
+
+          <div class="course__footer">
+            <p class="course__price course__price--line">$40 USD</p>
+            <p class="course__price">$10 USD</p>
+          </div>
+        </a>
+        <a href="#" class="courses__course course">
+          <img
+            src="assets/images/course-05.jpg"
+            alt="Imagen de curso"
+            class="course__image"
+          />
+          <div class="course__text">
+            <h3 class="course__title">Título del curso se muestra aquí</h3>
+            <p class="course__desc">
+              Lorem ipsum dolor sit amet consectur, adipisicing elit. Maime nam
+              necessitatibus aut animi illo perferendis.COnsectetur, neque ut
+              milestiae similique optio recusandae
+            </p>
+          </div>
+
+          <div class="course__footer">
+            <p class="course__price">$40 USD</p>
+          </div>
+        </a>
+        <a href="#" class="courses__course course">
+          <img
+            src="assets/images/course-06.jpg"
+            alt="Imagen de curso"
+            class="course__image"
+          />
+          <div class="course__text">
+            <h3 class="course__title">Título del curso se muestra aquí</h3>
+            <p class="course__desc">
+              Lorem ipsum dolor sit amet consectur, adipisicing elit. Maime nam
+              necessitatibus aut animi illo perferendis.COnsectetur, neque ut
+              milestiae similique optio recusandae
+            </p>
+          </div>
+
+          <div class="course__footer">
+            <p class="course__price">$40 USD</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="plans">
+      <h2 class="plans__title2">
+        Suscribete y potencia tu
+        <span class="plans__desc">futuro profesional</span>
+      </h2>
+      <p class="plans__desc1">
+        Lorem ipsum dolor sit amet consectur, adipisicing elit. Maime nam
+        necessitatibus aut animi illo perferendis.
+      </p>
+
+      <div class="plans__container">
+        <div class="plans__plan plan">
+          <div class="plan__header">
+            <h4 class="plan__title">Free</h4>
+            <p class="plan__price">Gratis</p>
+            <p class="plan__billing">Acceso gratuito a los cursos</p>
+          </div>
+
+          <ul class="plan__features">
+            <li class="plan__feature">
+              <i class="bx bx-check"></i>
+              Acceso a cursos gratuitos
+            </li>
+            <li class="plan__feature plan__feature--disabled">
+              <i class="bx bx-x"></i>
+              Certificados digitales
+            </li>
+            <li class="plan__feature plan__feature--disabled">
+              <i class="bx bx-x"></i>
+              Certificados digitales
+            </li>
+            <li class="plan__feature plan__feature--disabled">
+              <i class="bx bx-x"></i>
+              Certificados digitales
+            </li>
+            <li class="plan__feature plan__feature--disabled">
+              <i class="bx bx-x"></i>
+              Certificados digitales
+            </li>
+            <li class="plan__feature plan__feature--disabled">
+              <i class="bx bx-x"></i>
+              Certificados digitales
+            </li>
+          </ul>
+
+          <a href="#" class="plan__button"> Suscribete a Free </a>
+        </div>
+
+        <div class="plans__plan plan plan--expert">
+          <div class="plan__savings">
+            <p class="plan__saving">Ahorra 5 meses</p>
+          </div>
+          <div class="plan__header">
+            <h4 class="plan__title">Expert</h4>
+            <p class="plan__price">$270 USD</p>
+            <p class="plan__billing">Pago anual recurrente</p>
+          </div>
+
+          <ul class="plan__features">
+            <li class="plan__feature">
+              <i class="bx bx-check"></i>
+              Acceso a cursos gratuitos
+            </li>
+            <li class="plan__feature">
+              <i class="bx bx-check"></i>
+              Certificados digitales
+            </li>
+            <li class="plan__feature">
+              <i class="bx bx-check"></i>
+              Certificados digitales
+            </li>
+            <li class="plan__feature">
+              <i class="bx bx-check"></i>
+              Certificados digitales
+            </li>
+            <li class="plan__feature">
+              <i class="bx bx-check"></i>
+              Certificados digitales
+            </li>
+            <li class="plan__feature">
+              <i class="bx bx-check"></i>
+              Certificados digitales
+            </li>
+          </ul>
+
+          <div class="plan__payment">
+            <i class="bx bxs-timer plan__payment-icon"></i>
+            <p class="plan__payment-details">
+              Pago a
+              <span class="plan__payment-highlight">4 coutas</span>
+              sin interese de
+              <span class="plan__payment-highlight">$90 USD</span>
+              con tarjeta de debito o crédito.
+            </p>
+          </div>
+
+          <a href="#" class="plan__button plan__button--expert">
+            Suscribete a Expert
+          </a>
+        </div>
+
+        <div class="plans__plan plan">
+          <div class="plan__header">
+            <h4 class="plan__title">Basic</h4>
+            <p class="plan__price">$40 USD</p>
+            <p class="plan__billing">Pago mensual recurrente</p>
+          </div>
+
+          <ul class="plan__features">
+            <li class="plan__feature">
+              <i class="bx bx-check"></i>
+              Acceso a cursos gratuitos
+            </li>
+            <li class="plan__feature">
+              <i class="bx bx-check"></i>
+              Certificados digitales
+            </li>
+            <li class="plan__feature">
+              <i class="bx bx-check"></i>
+              Certificados digitales
+            </li>
+            <li class="plan__feature plan__feature--disabled">
+              <i class="bx bx-x"></i>
+              Certificados digitales
+            </li>
+            <li class="plan__feature plan__feature--disabled">
+              <i class="bx bx-x"></i>
+              Certificados digitales
+            </li>
+            <li class="plan__feature plan__feature--disabled">
+              <i class="bx bx-x"></i>
+              Certificados digitales
+            </li>
+          </ul>
+
+          <a href="#" class="plan__button"> Suscribete a Free </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <h2 class="testimonials__title2">
+        Lo que dicen nuestros
+        <span class="testimonials__title2-color">estudiantes</span>
+      </h2>
+
+      <div class="testimonials__container">
+        <div class="testimonials__testimony testimony">
+          <div class="testimony__header">
+            <img
+              class="testimony__profile"
+              src="assets/images/photo-profile.jpg"
+              alt="Foto de perfil"
+            />
+            <h4 class="testimony__name">Juan Carlos</h4>
+            <i class="bx bxs-quote-left testimony__icon"></i>
+          </div>
+          <p class="testimony__stars">
+            <i class="bx bxs-star testimony__start"></i>
+            <i class="bx bxs-star testimony__start"></i>
+            <i class="bx bxs-star testimony__start"></i>
+            <i class="bx bxs-star testimony__start"></i>
+            <i class="bx bxs-star-half testimony__start"></i>
+          </p>
+          <p class="testimony__desc">
+            Lorem ipsum dolor sit amet consectur, adipisicing elit. Maime nam
+            necessitatibus aut animi illo perferendis.
+          </p>
+        </div>
+        <div class="testimonials__testimony testimony">
+          <div class="testimony__header">
+            <img
+              class="testimony__profile"
+              src="assets/images/photo-profile.jpg"
+              alt="Foto de perfil"
+            />
+            <h4 class="testimony__name">Juan Carlos</h4>
+            <i class="bx bxs-quote-left testimony__icon"></i>
+          </div>
+          <p class="testimony__stars">
+            <i class="bx bxs-star testimony__start"></i>
+            <i class="bx bxs-star testimony__start"></i>
+            <i class="bx bxs-star testimony__start"></i>
+            <i class="bx bxs-star testimony__start"></i>
+            <i class="bx bxs-star-half testimony__start"></i>
+          </p>
+
+          <p class="testimony__desc">
+            Lorem ipsum dolor sit amet consectur, adipisicing elit. Maime nam
+            necessitatibus aut animi illo perferendis.
+          </p>
+        </div>
+        <div class="testimonials__testimony testimony">
+          <div class="testimony__header">
+            <img
+              class="testimony__profile"
+              src="assets/images/photo-profile.jpg"
+              alt="Foto de perfil"
+            />
+            <h4 class="testimony__name">Juan Carlos</h4>
+            <i class="bx bxs-quote-left testimony__icon"></i>
+          </div>
+          <p class="testimony__stars">
+            <i class="bx bxs-star testimony__start"></i>
+            <i class="bx bxs-star testimony__start"></i>
+            <i class="bx bxs-star testimony__start"></i>
+            <i class="bx bxs-star testimony__start"></i>
+            <i class="bx bxs-star-half testimony__start"></i>
+          </p>
+
+          <p class="testimony__desc">
+            Lorem ipsum dolor sit amet consectur, adipisicing elit. Maime nam
+            necessitatibus aut animi illo perferendis.
+          </p>
+        </div>
+        <div class="testimonials__testimony testimony">
+          <div class="testimony__header">
+            <img
+              class="testimony__profile"
+              src="assets/images/photo-profile.jpg"
+              alt="Foto de perfil"
+            />
+            <h4 class="testimony__name">Juan Carlos</h4>
+            <i class="bx bxs-quote-left testimony__icon"></i>
+          </div>
+          <p class="testimony__stars">
+            <i class="bx bxs-star testimony__start"></i>
+            <i class="bx bxs-star testimony__start"></i>
+            <i class="bx bxs-star testimony__start"></i>
+            <i class="bx bxs-star testimony__start"></i>
+            <i class="bx bxs-star-half testimony__start"></i>
+          </p>
+
+          <p class="testimony__desc">
+            Lorem ipsum dolor sit amet consectur, adipisicing elit. Maime nam
+            necessitatibus aut animi illo perferendis.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__brand">
+          <a href="#" class="footer__logo logo">
+            <i class="bx bxs-institution logo__icon"></i>
+            <span class="logo__text">EduPath</span>
+          </a>
+          <p class="footer__slogan">
+            Lorem ipsum dolor sit amet consectur, adipisicing elit. Maime nam
+            necessitatibus aut animi illo perferendis.
+          </p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link">
+              <i class="bx bxl-facebook"></i>
+            </a>
+            <a href="#" class="footer__social-link">
+              <i class="bx bxl-twitter"></i>
+            </a>
+            <a href="#" class="footer__social-link">
+              <i class="bx bxl-instagram"></i>
+            </a>
+            <a href="#" class="footer__social-link">
+              <i class="bx bxl-linkedin"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer__nav">
+          <h3 class="footer__nav-title">Compañía</h3>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Home</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Courses</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">About Us</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Contact</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Blogs</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__nav">
+          <h3 class="footer__nav-title">Comunidad</h3>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Documentación</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Preguntas frecuentes</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Foros</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Sitemap</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__nav">
+          <h3 class="footer__nav-title">Enseñanza</h3>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Enseña en EduPath</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Guía de instructor</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Términos & condiciones</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__contact">
+          <a href="https://wa.me/73180745" class="footer__contact-link">
+            <i class="bx bxl-whatsapp"></i>
+            WhatsApp
+          </a>
+          <a href="tel:+59173180745" class="footer__contact-link">
+            <i class="bx bxs-phone"></i>
+            Phone
+          </a>
+          <a href="mailto:josueajoruro@gamil.com" class="footer__contact-link">
+            <i class="bx bxs-envelope"></i>
+            Email
+          </a>
+        </div>
+        <p class="footer__copyright">&copy; 2024 EduPath.</p>
+
+        <a href="#" class="footer__back">
+          <i class="bx bx-up-arrow-alt footer__back-icon"></i>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

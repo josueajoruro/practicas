@@ -1,0 +1,348 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: "Open Sans", Arial, Sans-serif;
+	font-size: 16px;
+}
+
+.contenedor{
+	width: 90%;
+	max-width: 1000px;
+	margin: auto; /*centra el contenido*/
+	overflow: hidden; /*permite acomodar el comportamiento de las cajas cuando trabajamos con float*/
+}
+
+/* ---- ---- HEADER ---- ---- */
+
+header{
+	width: 100%;
+	background: url('../assets/img/bg.jpg') #281a0c; /*fondo imagen*/
+	background-size: cover; /*tamaño fondo*/
+	background-attachment: fixed; /*para que el fondo se quede pegado a pantalla*/
+	background-position: center 0px; /*posicion centrada*/
+}
+
+header .contenedor{
+	position: relative; /*para mover los elementos*/
+	height: 700px; /*alto del contenedor*/
+}
+
+header .menu{
+	width: 100%;
+	text-align: right; /*para que el texto se ponga el texto a la derecha*/
+}
+
+header .menu a{
+	color: #fff; /*color texto*/
+	font-size: 20px; /*tamaño texto*/
+	font-weight: 300; /*calidad de la letra*/
+	display: inline-block; /*para que los elmentos se coloquen uno al lado de otro*/
+	margin: 40px 20px;
+	text-decoration: none; /*quita el subrayado*/
+	position: relative; /*para trabajar con el efecto de jquery*/
+}
+
+/*efecto cuando pasas el mouse*/
+header .menu a:hover{
+	text-decoration: underline; /*devuelve el subrayado*/
+}
+
+header .textos{
+	width:  100%;
+	color: #fff;
+	position: absolute; /*para trabajar con el efecto(paralise) de jquery*/
+	top: 50%; /*top | arriba. Para centrar el texto*/
+	margin-top: -52px; /*para que quede bien centrado*/
+}
+
+header .textos .nombre{
+	font-size: 50px; /*tamaño texto*/
+	font-weight: 600; /*calidad de la letra*/
+}
+
+header .textos .nombre span{
+	font-weight: 300; /*calidad de la letra*/
+}
+
+header .textos h3{
+	font-size: 25px; /*tamaño texto*/
+	font-weight: 300; /*calidad de la letra*/
+	font-style: italic; /*cursiva*/	
+}
+
+/* ---- ---- MAIN ---- ---- */
+.main{
+	background: url('../img/bg-textura.png');
+	background-repeat: repeat; /*para que funcione en todos los navegadores*/
+}
+
+.main .acerca-de .contenedor{
+	overflow: visible; /*para que el contenido sobrante sea visible*/
+	position: relative; /*importante para superponer la foto*/
+}
+
+.main .acerca-de .foto{
+	width: 80%;
+	position: absolute; /*suporpone la imagen al frente*/
+	left: 0px;
+	top: -50px; /*sube la foto ya que le resta 50px*/
+	z-index: 0; /*para que la foto este debajo del articulo*/
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, .35); /*sombra*/
+}
+
+.main .acerca-de .foto img{
+	vertical-align: top;
+	width: 100%; /*para que abarque el total del contenedor*/
+}
+
+.main .acerca-de article{
+	background: #fff;
+	padding: 40px;
+	width: 50%;
+	position: relative; /*trae el articulo al frente de la imagen*/
+	top: 500px; /*entre menos el valor mas arriba va estar el texto*/
+	/*top: 150px;*/ /*baja el articulo*/
+	z-index: 1;
+	float: right; /*para poner a la derecha el articulo*/
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, .35); /*sombra*/
+}
+
+.main .acerca-de article h3{
+	font-size: 50px;
+	font-weight: 300; /*calidad de la letra*/
+	margin-bottom: 40px; /*margen abajo*/
+}
+
+.main .acerca-de article p{
+	line-height: 28px; /*interlineado*/
+	margin-bottom: 15px; /*margen abajo*/
+}
+
+.main .menu{
+	padding-top: 0px; /*top | arriba*/
+	margin-bottom: 50px; /*bottom | abajo*/
+}
+
+.main .menu .titulo{
+	font-size: 40px; /*tamaño texto*/
+	font-weight: 300; /*calidad texto*/
+	text-align: center; /*centra el texto*/
+	margin-bottom: 40px; /*margen abajo*/
+}
+/*ponemos los mismos estilos a los dos contenedores*/
+.main .menu .contenedor-menu,
+.main .menu .contenedor-menu2{
+	border: 1px solid #000;
+	background: transparent; /*fondo transparente*/
+	padding: 10px;
+	overflow: hidden; /*para que el contenido sobrante lo oculte*/
+}
+
+.main .menu article{
+	width: 50%;
+	float: left; /*left | izquierda. Ordena los articulos desde la izquierda*/
+	padding: 20px;
+}
+
+.main .menu .categoria{
+	font-size: 22px;
+	font-weight: 700;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.main .menu .platillo{
+	margin-bottom: 30px;
+	padding-bottom: 20px;
+	border-bottom: 4px dotted #000; /*dotted | puntitos*/
+	overflow: hidden; /*para que el contenido sobrante lo oculte*/
+}
+
+.main .menu .nombre{
+	font-size: 20px;
+	margin-bottom: 15px;
+	float: left; /*left | pone el texto a la izquierda*/
+}
+
+.main .menu .precio{
+	font-size: 20px;
+	margin-bottom: 15px;
+	float: right; /*right | pone el texto a la derecha*/
+}
+
+.main .menu .descripcion{
+	font-size: 16px;
+	color: #676767;
+	clear: both; /*soluciona el problema de los float, practicamente baja la descripcion*/
+}
+
+.main .galeria{
+	overflow: hidden; /*para que el contenido sobrante lo oculte*/
+}
+
+.main .galeria .foto{
+	width: 25%;
+	float: left; /*pone las fotos unas al lado de otra*/
+}
+
+.main .galeria .foto img{
+	width: 100%; /*para que la imagen ocupe el 100% de su contenedor*/
+	vertical-align: top; /*elimina el espacio sobrante*/
+	opacity: .7; /*opacidad*/
+}
+
+.main .galeria .foto img:hover{
+	opacity: 1;
+	transition: all .3s ease; /*transicion de tres segundos para todos los efectos*/
+}
+
+.main .ubicacion{
+	background: #fff;
+	padding: 60px 0px;
+	overflow: hidden; /*para evitar el problema de los float*/
+}
+
+.main .ubicacion .titulo{
+	text-align: center;
+	font-size: 40px; /*tamaño letra*/
+	line-height: 40px; /*internlineado*/
+	font-weight: 300; /*calidad de la letra*/
+	margin-bottom: 40px; /*margen abajo*/
+}
+ .main .ubicacion .direccion{
+ 	float: left; /*posiciona la direccion a la izquierda*/
+ 	width: 50%;
+ 	text-align: left; /*texto a la izquierda*/
+ }
+
+ .main .ubicacion .horarios{
+ 	float: right; /*posiciona los horarios a la derecha*/
+ 	width: 50%;
+ 	text-align: right; /*texto a la derecha*/
+ 	overflow: hidden; /*le ponemos al contenedor padre para que no vea problemas con los float*/
+ }
+
+.main .ubicacion .direccion .calle{
+	margin-bottom: 15px; /*margen abajo*/
+}
+
+.main .ubicacion .horarios h4{
+	text-align: center; /*centra el texto*/
+	margin-bottom: 20px; /*margen abajo*/
+}
+
+ .main .ubicacion .horarios .entre-semana,
+ .main .ubicacion .horarios .fin-semana{
+ 	width: 50%;
+ 	float: left; /*lef | izquierda*/
+ 	text-align: center;
+ }
+
+ .main .mapa{
+ 	width: 100%;
+ 	overflow: hidden;  /*para que se oculte la porcion sobrante*/
+ }
+
+  .main .mapa iframe{
+  	width: 100%;
+  	max-height: 600px; /*alto maximo*/
+  }
+
+/* ---- ---- FOOTER ---- ---- */
+footer{
+	background: #000;
+}
+
+footer .copyright{
+	text-align: center;
+	padding: 15px 0px;
+	color: #fff;
+}
+
+/* ---- ---- MEDIA QUERIES ---- ---- */
+/*se aplican a los dispositivos que su tamaño es menor 800px*/
+@media screen and (max-width: 800px){
+	header .contenedor{
+		position: static; /*cambiamos a static para no trabajar con el efecto paralais*/
+		height: auto; /*altura auto*/
+	}
+
+	header .textos{
+		position: static; /*cambiamos a static para no trabajar con el efecto paralais*/
+		margin: 100px 0px; /*espaciado*/
+	}
+
+	header .menu{
+		text-align: center; /*centra el texto*/
+	}
+
+	header .menu a{
+		margin: 10px 20px; /*espaciado*/
+	}
+
+	header .textos .nombre{
+		font-size: 30px; /*tamaño texto*/
+	}
+
+	header .textos h3{
+		font-size: 18px; /*tamaño texto*/
+	}
+
+	.main .acerca-de .foto{
+		width: 100%; /*para que el contenedor abarque el total*/
+		position: relative; /*para quitar la superposicion para q no se ponga encima otro elemento*/
+	}
+
+	.main .acerca-de article{
+		position: relative;
+		width: 100%; /*para que abarque el total*/
+		top: -50px; /*reduce la distancia de la cima*/
+		transform: translate(0px, 0); /*inicializamos , para luego trabajar con jquery*/
+	}
+
+	.main .menu{
+		padding-top: 300px; /*reduce el padding del menu*/
+	}
+
+	.main .menu article{
+		width: 100%; /*para que solo vea una columna en el menu*/
+	}
+
+	.main .galeria .foto{
+		width: 50%; /*para que solo entren 2 fotos*/
+	}
+
+	.main .mapa{
+		max-width: 80%;
+		margin: auto; /*para centrar el mapa*/ 
+	}
+}
+
+@media screen and (max-width: 400px){
+	.main .acerca-de article h3{
+		font-size: 34px; /*reduce el tamaño del titulo*/
+		margin-bottom: 10px; /*margen abajo*/
+	}
+
+	.main .menu article .nombre,
+	.main .menu article .precio{
+		font-size: 16px; /*tamaño texto*/
+		line-height: 16px; /*interlineado*/
+	}
+
+	.main .ubicacion .direccion{
+		margin-bottom: 15px; /*margen abajo*/
+	}
+
+	.main .ubicacion .direccion,
+	.main .ubicacion .horarios{
+		width: 100%; /*para q abarque el total*/
+		text-align: center; /*centra el texto*/
+	}
+}

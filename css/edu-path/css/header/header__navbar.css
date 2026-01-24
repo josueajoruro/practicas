@@ -1,0 +1,183 @@
+.navbar{
+	display: flex; /*flexible*/
+	justify-content: space-between; /*espaciado horizontal entre elementos*/
+	align-items: center; /*centra vertical los elementos*/
+}
+
+.logo{
+	display: flex;
+	gap: 0.5rem; /*espaciado entre elementos*/
+	align-items: center; /*centra vertical los elementos del logo*/
+	color: var(--color-950);
+	transition: 0.3s ease; /*transicion suave*/
+}
+
+.logo:hover{
+	color: var(--color-main);
+}
+
+.logo__icon{
+	font-size: 6rem; /*tamaño del icono*/
+}
+
+.logo__text{
+	font-size: 3rem;
+	font-family: "Rubik Doodle Shadow", system-ui;
+	font-weight: 900; /*negrita*/
+}
+
+.menu-btn{
+	display: inline-block;
+	cursor: pointer;
+}
+
+.menu-btn__line{
+	display: block;
+	width: 2rem;
+	height: 0.3rem;
+	background-color: var(--color-950);
+	margin: 0.5rem auto;
+	border-radius: 0.5rem;
+	transition: all 0.3s ease; /*transicion suave*/
+}
+
+.menu{
+	display: none; /*esconde el menu*/
+}
+
+#menu-toggle:checked~.menu{ /*al seleccionar aparece el menu*/
+	display: grid; /*cuadricula*/
+	gap: 0.5rem; /*espaciado entre elementos*/
+	align-content: start; /*alinea al principio los elementos vertical*/
+	background-color: var(--color-600);
+	position: absolute; /* posicion encima*/
+	top: 6.5rem;
+	left: 0;
+	width: 100%;
+	padding: 2rem 1rem;
+	height: 89vh; /*alto de acuerdo a la pantalla*/
+	box-shadow: 0 0 0.5rem var(--color-500); /*sombreado*/
+}
+
+@media(min-width: 576px){ /*mediano-grande*/
+	.menu{
+		all: unset; /*resetea todos los estilos*/
+		display: flex; /*flexible*/
+	}
+	
+	.menu-btn{
+		display: none; /*oculta el boton*/
+	}
+}
+
+.menu__link{
+	display: block;
+	color: var(--color-200);
+	padding: 1rem;
+}
+
+.menu__link:hover{
+	color: var(--color-main);
+	background-color: var(--color-700);
+}
+
+@media(min-width: 576px){
+	.menu__link{
+		color: var(--color-950);
+	}
+
+	.menu__link:hover{
+		background-color: transparent; /*transparente*/	
+	}
+}
+
+#menu-toggle:checked+.menu-btn .menu-btn__line--1{ /*al seleccionar aplica la animacion*/
+	animation: line1 0.3s forwards; /*forwards | para q recuerde los estilos*/
+}
+
+#menu-toggle:checked+.menu-btn .menu-btn__line--2{ /*al seleccionar aplica la animacion*/
+	animation: line2 0.3s forwards; /*forwards | para q recuerde los estilos*/
+}
+
+#menu-toggle:checked+.menu-btn .menu-btn__line--3{ /*al seleccionar aplica la animacion*/
+	animation: line3 0.3s forwards; /*forwards | para q recuerde los estilos*/
+}
+
+@keyframes line1{
+	0% {
+		transform: translateY(0) rotate(0);
+	}
+
+	50% {
+		transform: translateY(8px) rotate(0);
+	}
+
+	100% {
+		transform: translateY(8px) rotate(45deg); /*se mueve en el eje 'Y' y rota 45grados*/
+	}
+}
+
+@keyframes line2{
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+
+	100% {
+		opacity: 0; /*desaperece el elemento*/
+	}
+}
+
+@keyframes line3{
+	0% {
+		transform: translateY(0) rotate(0);
+	}
+
+	50% {
+		transform: translateY(-8px) rotate(0);
+	}
+
+	100% {
+		transform: translateY(-8px) rotate(-45deg); /*se mueve en el eje 'Y' y rota 45grados*/
+	}
+}
+
+#menu-toggle:not(:checked)+.menu-btn .menu-btn__line--1{ /*al deseleccionar aplica la animacion*/
+	animation: line1-r 0.3s forwards; /*forwards | para q recuerde los estilos*/
+}
+
+#menu-toggle:not(:checked)+.menu-btn .menu-btn__line--3{ /*al deseleccionar aplica la animacion*/
+	animation: line3-r 0.3s forwards; /*forwards | para q recuerde los estilos*/
+}
+
+@keyframes line1-r{
+	0% {
+		transform: translateY(8px) rotate(45deg);
+	}
+
+	50% {
+		transform: translateY(8px) rotate(0);
+	}
+
+	100% {
+		transform: translateY(0) rotate(0); /*se mueve en el eje 'Y' y rota 45grados*/
+	}
+}
+
+@keyframes line3-r{
+	0% {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+
+	50% {
+		transform: translateY(-8px) rotate(0);
+	}
+
+	100% {
+		transform: translateY(0) rotate(0); /*se mueve en el eje 'Y' y rota 45grados*/
+	}
+}
+

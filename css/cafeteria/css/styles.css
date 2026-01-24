@@ -1,0 +1,603 @@
+/*<768 <578 <676 | movil
+<992 | tablet
+<1200 | laptop*/
+@font-face {
+  font-family: "Open Sans";
+  src: url("../assets/fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf")
+    format("truetype");
+  font-weight: 100 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pacifico";
+  src: url("../assets/fonts/Pacifico/Pacifico-Regular.ttf") format("truetype");
+  font-weight: 100 700;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /*para q respete el tamaño cuando ocupamos margin, padding y border*/
+  text-decoration: none; /*sin subrayado los enlaces*/
+}
+/* definimos varibles */
+:root {
+  --bg-color: rgba(47, 23, 15, 0.9);
+  --second-bg-color: #df902a;
+  --text-color: #e1e1e1;
+  --hover-color: rgba(255, 255, 255, 0.4);
+
+  --font-sans: "Open Sans", sans-serif;
+  --font-pacifico: "Pacifico", cursive;
+}
+
+html {
+  font-size: 62.5%; /*1rem = 10px*/
+}
+
+body {
+  font-size: 1.6rem; /*tamaño texto*/
+  font-family: var(--font-sans); /*fuente*/
+}
+
+@media (max-width: 768px) {
+  /*hasta 768px(movil)*/
+  body {
+    font-size: 1.4rem;
+  }
+}
+
+/* Utilidades */
+.container {
+  /*max-width: 100rem; 1000px*/
+  /*adaptable*/
+  width: 100%; /*abarca el 100% en dispositivos pequeños*/
+  max-width: 100rem; /*abarca 1000px como maximo*/
+  padding: 1rem; /*10px*/
+  margin: 0 auto; /*centra horizontalmente*/
+}
+
+.btn {
+  display: inline-flex;
+  padding: 2rem 3rem; /*20px 30px*/
+  background-color: var(--second-bg-color);
+  border-radius: 1rem; /*10px*/
+  font-weight: 600; /*negrita*/
+  color: var(--bg-color); /*color fuente*/
+  font-size: 1.8rem; /*tamaño fuente 18px*/
+  transition-duration: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1); /*acerca el boton*/
+}
+
+.title2 {
+  font-family: var(--font-pacifico);
+  font-size: 4rem; /*40px tamaño de la fuente*/
+  text-align: center; /*centra el texto*/
+  margin: 3rem 0;
+}
+
+/*video*/
+#bg-video {
+  position: absolute; /*para q ocupe tono el contenedor*/
+  top: 0; /*posiciona el video arriba*/
+  left: 0; /*posiciona el video a la izquierda*/
+  width: 100%; /*para q ocupe el 100% del ancho contenedor*/
+  height: 100%; /*para q ocupe el 100% del alto contenedor*/
+  object-fit: cover; /*para q el video se adapte cuando el tamaño del dispositivo sea diferente*/
+  z-index: -1; /*posiciona el video en la parte inferior*/
+}
+
+/*header*/
+.header {
+  position: relative; /*para q el video se adapte al contenido del header*/
+  /*max-width: 100%;*/ /*ancho maximo*/
+  height: 100vh; /*para q el alto se adapte al de la pantalla*/
+  text-align: center; /*centra el texto*/
+  overflow: hidden; /*para q oculte el contenido q se desborda*/
+}
+
+@media (max-width: 992px) {
+  /*hasta 992px(tablet)*/
+  .header {
+    height: 100%;
+    padding-bottom: 5rem;
+  }
+}
+
+.header-logo {
+  margin: 3rem 0; /*30px*/
+}
+
+.header-logo h1 {
+  color: var(--second-bg-color); /*color de fuente*/
+  font-family: var(--font-pacifico);
+  font-size: 4rem; /*40px tamaño de fuente*/
+}
+
+.header-logo h2 {
+  text-transform: uppercase; /*convierte mayuscula*/
+  color: var(--text-color);
+  font-size: 3rem; /*30px tamaño texto*/
+}
+
+.navbar {
+  display: flex; /*flexible*/
+  justify-content: center; /*justifica al centro el contenido*/
+  gap: 2rem; /*espacido entre elementos*/
+  background-color: var(--bg-color);
+  padding: 3rem 0; /*20px*/
+}
+
+@media (max-width: 576px) {
+  /*hasta 576px(movil)*/
+  .navbar {
+    padding: 2rem;
+  }
+  .navbar a {
+    font-size: 1.3rem;
+  }
+  .header-logo h1 {
+    font-size: 2rem;
+  }
+  .header-logo h2 {
+    font-size: 2rem;
+  }
+}
+
+.navbar a {
+  color: var(--text-color); /*color de texto*/
+  text-transform: uppercase; /*mayuscula*/
+  font-weight: 700; /*negrita*/
+}
+
+.navbar a:hover {
+  color: var(--second-bg-color);
+}
+
+/*WELCOME*/
+.welcome-content {
+  background-color: var(--bg-color);
+  color: var(--text-color); /*color texto*/
+  max-width: 45rem; /*ancho maximo 450px*/
+  padding: 2.5rem 2rem 0.8rem 2rem;
+  border-radius: 2rem; /*borde redondeado*/
+  margin-top: 3rem; /*margen arriba 30px*/
+}
+
+.welcome-content span {
+  display: block; /*para q tenga las propiedades de bloque es decir, q abarque todo el ancho*/
+}
+
+.welcome-content h2 span:first-child {
+  /*selecciona el primer span*/
+  color: var(--second-bg-color);
+  font-size: 2rem /*tamaño fuente 20px*/;
+  font-weight: 700; /*negrita*/
+}
+
+.welcome-content h2 span:last-child {
+  /*selecciona el último span*/
+  font-weight: 100; /*negrita*/
+  font-size: 4.5rem; /*tamaño fuente*/
+  margin-bottom: 2rem; /*margen abajo 20px*/
+}
+
+.welcome-content p {
+  line-height: 1.75; /*intelineado*/
+  margin-bottom: 3rem; /*margen abajo 20px*/
+}
+
+.welcome-btn {
+  margin-bottom: -4rem; /*margen abajo*/
+  /*podemo utilizar valores negativos para mover elementos fuera del contenedor*/
+}
+
+/*estilos de productos mas vendidos*/
+
+.best-sellers {
+  background-image: url(../assets/images/bg-img1.jpg); /*imagen de fondo*/
+  background-repeat: no-repeat; /*para q  la imagen no se repita*/
+  background-position: center; /*centra la imagen*/
+  background-size: cover; /*para q se adapte al contenedor*/
+  width: 100%; /*para q abarque el 100% del contenedor*/
+  padding: 3rem 0;
+}
+
+.best-sellers-content {
+  display: grid; /*cuadriculas*/
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(40rem, 1fr)
+  ); /*auto-fit | hace q los elementos q tienen contenido ocupen todo el ancho disponibley no se desborden.
+    si hay espacio añade una columna mas al lado*/
+  align-content: center; /*centra el contenido horizontalmente*/
+  gap: 2rem; /*espaciado entre elementos*/
+}
+
+@media (max-width: 576px) {
+  /*hasta 576px(movil)*/
+  .best-sellers-content {
+    grid-template-columns: 1fr; /*para q abarque 1 fraccion*/
+  }
+}
+
+.best-sellers-item {
+  background-color: var(--hover-color); /*color de fondo*/
+  padding: 3rem 2rem;
+  border-radius: 1rem; /*borde redondeado*/
+  text-align: center; /*centra los items en el contenedor*/
+}
+
+.best-sellers-item img {
+  width: 70%; /*para q ocupe el 70% del contenedor*/
+  border-radius: 1rem; /*borde redondeado*/
+}
+
+.best-sellers-item h3 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem; /*tamaño de fuente*/
+}
+
+.best-sellers-item p {
+  margin: 2rem 0;
+}
+
+.best-sellers-item .btn {
+  padding: 1rem 2rem;
+}
+
+/* Estilos de nuevos productos */
+.new-product {
+  padding: 6rem 0;
+  width: 100%;
+  background-image: url(../assets/images/bg-img2.jpg); /*fondo imagen*/
+  background-repeat: no repeat; /*para q no se repita la imagen*/
+  background-position: center; /*centra el fondo imagen*/
+  background-size: cover; /*para q el fondo se adapte al tamaño del dispositivo*/
+}
+
+.product-content {
+  position: relative; /*para q se posicione en relacion al contendor*/
+}
+
+.product-content img {
+  width: 100%; /*para q la imagen abarque el 100% del contenedor*/
+}
+
+.product-info {
+  position: absolute; /*para q se sobreponga sobre la img*/
+  top: 30px; /*posiciona a 30px del contenedor*/
+  right: 15px; /*posiciona a 15px de la derecha*/
+  width: 40rem; /*ancho del contenedor*/
+  text-align: center; /*centra el texto*/
+}
+
+@media (max-width: 992px) {
+  /*hasta 992px(tablet)*/
+  .product-info {
+    top: 65%;
+    right: auto;
+    left: 50%;
+    width: 95%;
+    transform: translateX(-50%);
+    /*centramos con left y translateX*/
+  }
+}
+
+.product-info .title2 {
+  margin-bottom: 2rem;
+  font-size: 4rem;
+}
+
+.product-info p {
+  margin-bottom: 3rem; /*margen abajo*/
+  font-size: 2rem; /*tamaño fuente*/
+}
+
+.product-info .btn {
+  background-color: var(--bg-color);
+  color: var(--text-color); /*color fuente*/
+}
+
+@media (max-width: 578px) {
+  .product-info .title2 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+
+  .product-info p {
+    margin-bottom: 1rem; /*margen abajo*/
+    font-size: 1.4rem; /*tamaño fuente*/
+  }
+
+  .product-info .btn {
+    font-size: 1.4rem; /*tamaño fuente*/
+    padding: 1rem 2rem;
+  }
+}
+
+/* Estilos de menu carta */
+.menu {
+  padding: 4rem 0;
+  background-color: var(--second-bg-color); /*color de fondo*/
+}
+
+.menu-content {
+  border: 0.2rem solid var(--bg-color);
+  padding: 1rem;
+}
+.menu-content2 {
+  border: 0.2rem solid var(--bg-color);
+  padding: 2rem;
+
+  display: grid; /*cuadriculas*/
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(40rem, 1fr)
+  ); /*auto-fit | añade una columna si hay espacio tambien evita desbordamiento*/
+}
+
+@media (max-width: 578px) {
+  /*hasta 578px(movil)*/
+  .menu-content2 {
+    grid-template-columns: 1fr; /*para q abarque una fraccion*/
+  }
+}
+
+.menu-content2 article {
+  padding: 2rem;
+}
+
+.menu-content2 article h5 {
+  text-align: center; /*centra el h5*/
+  font-size: 2.2rem; /*tamaño fuente*/
+  margin-bottom: 4rem;
+  font-weight: 700; /*negrita*/
+}
+
+.menu-item {
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+  border-bottom: 0.4rem dotted var(--bg-color); /*dotted borde con puntitos*/
+
+  display: grid; /*cuadriculas*/
+  grid-template-columns: 3fr 1fr; /*la primer columna abarca 3 fracciones*/
+}
+
+.menu-item .name,
+.menu-item .price {
+  font-size: 2rem; /*tamaño fuente*/
+  font-weight: 600; /*negrita*/
+  margin-bottom: 1.5rem;
+}
+
+.menu-item .price {
+  text-align: end; /*posiciona al final el texto*/
+}
+
+.menu-item .desc {
+  grid-column: span 2; /*para q ocupe 2 columnas*/
+}
+
+/* Galeria de imagenes */
+
+.gallerry {
+  background-color: var(--bg-color); /*color de fondo*/
+  background-image: url(../assets/images/bg-img2.jpg); /*imagen de fondo*/
+  background-position: center; /*centra el fondo imagen*/
+  background-repeat: no-repeat; /*para q no se repita la imagen*/
+  background-size: cover; /*para q se adapte al tamaño de la pantalla*/
+
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(40rem, 1fr)
+  ); /*auto-fit | añade columnas si hay espacio y evita el desbordamiento*/
+}
+
+.gallerry img {
+  width: 100%; /*para q la imagens ocupen el 100% del contenedor*/
+  height: auto;
+  opacity: 0.4; /*opacidad*/
+  transition-duration: 0.5s; /*duracion de la transicion*/
+}
+
+.gallerry img:hover {
+  opacity: 1; /*devuelve la opacidad*/
+  cursor: pointer;
+  transform: scale(1.1); /*para q se acerque la imagen*/
+  z-index: 100; /*orden de apilamiento*/
+}
+
+/* Localizacion */
+.location {
+  padding: 6rem 0;
+}
+
+.location-content {
+  display: grid; /*cuadricula*/
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(40rem, 1fr)
+  ); /*para q se añada nuevas columnas si hay espacio*/
+}
+.location-content .address,
+.location-content .schedules {
+  padding: 2rem;
+  font-style: normal; /*para quitar la cursiva de la fuente*/
+}
+
+.location-content h3 {
+  font-size: 2.5rem; /*tamaño de fuente*/
+  margin-bottom: 2rem;
+}
+
+.location-content p,
+.location-content li {
+  font-weight: 500; /*negrita*/
+  font-size: 1.8rem; /*tamaño fuente*/
+}
+
+.map {
+  width: 100%;
+}
+
+.map iframe {
+  width: 100%;
+  max-height: 60rem; /*limitamos la altura a un alto maximo*/
+}
+
+/* Pie de pagina */
+.footer {
+  background-color: var(--bg-color); /*color de fondo*/
+  color: var(--text-color); /*color de fuente*/
+  padding: 4rem 0;
+}
+
+.footer a {
+  color: var(--text-color); /*color de fuente*/
+}
+
+.footer-logo {
+  grid-area: footer-logo;
+} /*le ponemos sobrenombre para trabajar con area*/
+.social-media {
+  grid-area: social-media;
+}
+.footer-about {
+  grid-area: footer-about;
+}
+.footer-other {
+  grid-area: footer-other;
+}
+.footer-text {
+  grid-area: footer-text;
+}
+
+.footer-content {
+  display: grid; /*cuadriculas*/
+  grid-template-areas:
+    "footer-logo footer-logo footer-about footer-other"
+    "social-media social-media footer-about footer-other"
+    "footer-text footer-text footer-text footer-text";
+  gap: 2rem; /*espaciado entre elementos*/
+}
+
+@media (max-width: 992px) {
+  /*hasta 992px(tablet)*/
+  .footer-content {
+    grid-template-areas:
+      "footer-logo footer-logo footer-logo footer-about footer-about"
+      "social-media social-media social-media footer-about footer-about"
+      ". . . footer-other footer-other"
+      ". . . footer-other footer-other"
+      "footer-text footer-text footer-text footer-text footer-text";
+  }
+}
+
+@media (max-width: 676px) {
+  /*hasta 676px(movil)*/
+  .footer-content {
+    grid-template-areas:
+      "footer-logo footer-logo"
+      "social-media social-media"
+      "footer-about footer-other"
+      "footer-about footer-other"
+      "footer-text footer-text";
+    place-content: center; /*centra el contenido*/
+  }
+}
+
+@media (max-width: 420px) {
+  /*hasta 420px(movil)*/
+  .footer-content {
+    grid-template-areas:
+      "footer-logo"
+      "social-media"
+      "footer-about"
+      "footer-other"
+      "footer-text";
+    place-content: center; /*centra el contenido*/
+  }
+}
+
+.footer-logo {
+  place-self: center; /*cetra vertical*/
+}
+
+.footer-logo h2 {
+  color: var(--second-bg-color); /*color de fuente*/
+  font-family: var(--font-pacifico); /*tipo de fuente*/
+  font-size: 3rem; /*tamaño texto*/
+  text-align: center; /*centra el texto*/
+}
+
+.footer-logo .desc {
+  text-align: center;
+  font-size: 2.5rem; /*tamaño fuente*/
+  font-weight: 600; /*negrita*/
+}
+
+.social-media {
+  display: flex; /*flexible*/
+  align-items: center;
+  justify-content: center; /*centra el contenedor al centro vertical*/
+  margin: 2rem 0;
+  gap: 2.5rem; /*espaciado entre cada elemento*/
+}
+
+.social-media a {
+  color: var(--second-bg-color); /*color de los iconos*/
+  display: inline-flex; /*para q esten en linea y sea flexible*/
+  padding: 1rem;
+  border: 0.2rem solid var(--second-bg-color);
+  border-radius: 50%; /*forma de circulo*/
+  font-size: 2rem; /*tamaño icono*/
+  transition: 0.3s ease; /*transicion suave*/
+}
+
+.social-media a:hover {
+  background-color: var(--second-bg-color);
+  color: var(--bg-color);
+  transform: scale(1.2); /*escala la imagen mas cerca*/
+  box-shadow: 0 0 2rem var(--second-bg-color); /*sombreado*/
+}
+
+.footer-about h3,
+.footer-other h3 {
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem; /*tamaño fuente*/
+  padding: 0.5rem;
+}
+
+.footer-about ul,
+.footer-other ul {
+  padding-left: 2rem;
+  list-style: none; /*elimina los puntos de la lista desordenada*/
+}
+
+.footer-about li,
+.footer-other li {
+  margin-bottom: 1rem;
+}
+
+.footer-about a,
+.footer-other a {
+  font-size: 1.8rem; /*tamaño fuente*/
+  font-weight: 400; /*negrita*/
+}
+
+.footer-about a:hover,
+.footer-other a:hover {
+  color: var(--hover-color);
+}
+
+.footer-text {
+  text-align: center; /*centra el texto*/
+  color: var(--hover-color);
+}

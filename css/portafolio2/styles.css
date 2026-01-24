@@ -1,0 +1,679 @@
+@font-face {
+    font-family: "AR One Sans";
+    src: url('./assets/fonts/AROneSans-VariableFont_ARRR,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+/*Inicializamos los ajustes*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*para q respete el tamaño cuando ocupamos margin, padding y border*/
+    text-decoration: none; /*quita los estilos por defecto de los enlaces*/
+    border: none; /*quita los bordes*/
+}
+/* variables de color */
+:root{
+    --bg-color: #f7f7f7;
+    --second-bg-color: #eaeaea;
+    --text-color: #3f3844;
+    --main-color: #ff5733;
+    --other-color: #5d6c83;
+}
+
+html{
+    font-size: 62.5%; /* 1rem -> 10px son equivalentes es decir 62.5% -> 10px -> 1 rem*/
+    overflow-x: hidden; /*esconde los elementos que se desbordan en el eje x(vertical)*/
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1.6rem; /*16px*/
+    font-family: "AR One Sans", sans-serif, Arial;
+}
+
+@media(max-width: 768px){ /*de 0 a 768px*/
+	body{
+		font-size: 1.4rem;
+	}
+}
+
+/* max-height | tamaño maximo del alto*/
+section{
+    min-height: 100vh; /* tamaño minimo del alto de la ventana */
+    padding: 10rem 10% 2rem; 
+}
+
+@media(max-width: 768px){ /*de 0 a 768px*/
+	section{
+		min-height: auto; /* tamaño minimo automatico */
+    	padding: 11rem 3% 2rem; 
+	}
+}
+
+/* Utilidades | los creamos para areas repetidas del diseño*/
+.heading{
+    font-size: 4.5rem; /*45px*/ 
+    text-align: center; /*centra el texto*/
+}
+
+.heading-description{
+    font-size: 1.8rem; /*18px*/
+    margin-bottom: 3rem; /*30px */
+    text-align: center; /*centra el texto*/
+}
+
+@media(max-width: 768px){ /*de 0 a 768px*/
+	.heading{
+		font-size: 3rem;
+	}
+	.heading-description{
+		font-size: 1.4rem;
+	}
+}
+
+span{
+    color: var(--main-color);
+}
+
+/* HEADER */
+.header{
+    position: fixed; /*posiciona de manera fija el header*/
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100; /*evita q otros elementos se posicionen en el header*/
+
+    display: flex; /*para q el elemento sea flexible*/
+    justify-content: space-between; /*añade espaciado horizontalmente*/
+    align-items: center; /*centra los elementos verticalmente*/
+    padding: 2rem 10%; /*2rem -> 20px*/
+    background-color: var(--bg-color);
+    box-shadow: 0 1px .3rem var(--text-color); /*sombreado de 3px*/
+}
+
+@media(max-width: 768px){ /*de 0 a 768px*/
+	.header{
+		flex-direction: column; /*posiciona en columna los items del header*/
+		padding: 1rem 2%;
+	}
+}
+
+.logo{
+    font-size: 2.5rem; /*25px*/
+    color: var(--main-color);
+    font-weight: 700; /*negrita*/
+    transition-duration: .5s; /*duracion de la transicion del texto*/
+}
+
+@media(max-width: 768px){ /*de 0 a 768px*/
+	.logo{
+		font-size: 3.5rem;
+		margin-bottom: 1rem;
+	}
+}
+
+.logo:hover{
+    transform: scale(1.05); /*scala el texto es decir acerca el texto*/
+}
+
+.navbar{
+    display: flex; /*flexible*/
+    gap: 1.5rem; /*15px de espaciado entre los elementos*/
+}
+
+.navbar a{
+    color: var(--text-color);
+    font-weight: 600; /*negrita*/
+    transition: .3s ease; /* duracion de la transicion */
+    /*ease | para q se aplique a todas partes*/
+    border-bottom: .2rem solid transparent; /*borde transparente*/
+    text-transform: uppercase; /* transforma el texto en mayuscula */
+}
+
+@media(max-width: 768px){ /*de 0 a 768px*/
+	.navbar{
+		gap: 1rem; /*espaciado entre elementos*/
+	}
+	.navbar a{
+		font-size: 1.2rem; /*reduce el tamaño de la fuente de los enlaces*/
+	}
+}
+
+/*los estilos se aplican a todos los a:hover y al elemento a con la clase active*/
+.navbar a:hover, 
+.navbar a.active{
+    border-bottom-color: var(--main-color);
+    color: var(--main-color);
+}
+
+/* Home */
+.home{
+    display: flex; /*flexible*/
+    justify-content: flex-end; /* flex-end | Justifica los elementos al final*/
+    align-items: center; /*centra los elementos verticalmente*/
+    background-image: url(../images/home-img.png);
+    background-repeat: no-repeat; /*evita q la imagen se repita*/
+    background-size: cover; /* cover | para q rellene todo el contenedor */
+}
+
+.home-content{
+    width: 60%; /*ancho del contenedor*/
+    margin-left: 5rem; /*margen izquierdo*/
+    padding: 6rem 2rem;
+    background-color: rgb(247, 247, 247, 0.9); /*color rgb con transparencia de 0.9*/
+    border: .2rem solid var(--main-color); /*2px borde*/
+    border-radius: 2rem; /*borde redondeado*/
+}
+
+@media(max-width: 1200px){ /* hasta 1200px*/
+	.home{
+		justify-content: center; /*justifica al centro el contenido*/
+		background-color: var(--bg-color);
+		background-image: none; /*quita la imagen del home*/
+	}
+	.home-content{
+		width: 100%; /*para q abarque el total del contenedor*/
+		padding: 0;
+		margin-left: 0;
+		border: none;
+		text-align: center; /*centra la fuente*/
+	}
+}
+
+.home-content h1{
+    font-size: 5rem; /*50px tamaño letra*/
+    font-weight: 700; /*negrita*/
+    line-height: 1.3; /*interlineado*/
+}
+
+.home-content h3{
+    font-size: 3.5rem; /*35px tamaño letra*/
+    font-weight: 700; /*negrita*/
+    margin-bottom: 2rem; /*margen abajo*/
+}
+
+.home-content p{
+    font-size: 1.8rem; /*18px tamaño letra*/
+    margin-bottom: 2rem; /*margen abajo*/
+}
+
+@media(max-width: 768px){ /*de 0 a 768px*/
+	.home-content h1{
+		font-size: 3rem;
+	}
+	.home-content h3{
+		font-size: 2.5rem;
+	}
+	
+	.home-content p{
+		font-size: 1.6rem;
+	}
+}
+
+/* REDES SOCIALES */
+
+.social-media a{
+    display: inline-flex; /*pone flexible el texto(icono)*/
+    justify-content: center; /*centra horizontalmente*/
+    align-items: center; /*centra verticalmente el texto(icono)*/
+    width: 4.2rem;
+    height: 4.2rem;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%; /*para hacer un circulo*/
+    font-size: 2rem; /*tamaño icono*/
+    color: var(--main-color); /*color icono*/
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .3s ease; /*transicion del hover*/
+}
+
+.social-media a:hover{
+    transform: scale(1.2) translateY(-1rem); /*Para q se traslade hacia arriba en el eje y*/
+    background-color: var(--main-color); /*color de fondo*/
+    color: var(--bg-color); /*color del icono*/
+    box-shadow: 0 0 3.5rem var(--main-color); /*sombreado de 25px a todos lados*/
+}
+
+.btn,
+.btn-ws{
+    display: inline-block; /*icono flexible*/
+    padding: 1rem 2.8rem;
+    margin: 1rem 3rem 1rem 0;
+    background-color: var(--main-color);
+    border-radius: 4rem; /*borde redondeado*/
+    font-size: 2rem; /*tamaño del icono*/ 
+    color: var(--bg-color); /*color icono*/
+    font-weight: 400; /*negrita*/
+    transition: .3s ease; /*transicion del hover*/
+}
+
+.btn-ws{
+    display: inline-flex; /*flexible*/
+    align-items: center;
+    background-color: green;
+}
+
+.btn-ws i{
+    font-size: 2.5rem; /*tamaño del icono*/
+    padding-right: .7rem; 
+}
+
+.btn-ws p{
+    margin: 0; /*quita el margen del parrafo*/
+    border-left: .2rem solid var(--bg-color); /*linea a la izquierda*/
+    padding-left: .7rem;
+}
+
+.btn:hover{
+    box-shadow: 0 0 1.6rem var(--main-color); /*sombreado*/
+    transform: scale(1.1); /*acerca el boton*/
+}
+
+.btn-ws:hover{
+    box-shadow: 0 0 1.6rem green; /*sombreado*/
+    transform: scale(1.1); /*acerca el boton*/
+}
+
+/* ABOUT */
+
+.about{
+    display: flex; /*flexible*/
+    justify-content: center; /*centtra horizontalemente*/
+    align-items: center; /*centra verticalmente*/
+    background-color: var(--second-bg-color);
+    gap: 2rem; /*20px de espaciado entre elementos*/
+}
+
+.about .heading{
+    text-align: start; /*para q el texto este desde el principio*/
+}
+
+@media(max-width: 1200px){ /*hasta 1200px*/
+	.about{
+		flex-direction: column; /*para q se posicione en columnas es decir uno debajo de otro*/
+	}
+	
+	.about .heading{
+		text-align: center; /*centra la fuente*/
+	}
+}
+
+@media(max-width: 768px){ /*de 0 a 768px*/
+	.about h3{
+		font-size: 2.5rem;
+	}
+}
+
+.about-img img{
+    width: 30vw; /*ocupa la 30 parte de la pantalla*/
+    border: .2rem solid var(--main-color);
+    border-radius: 50%; /*redondea la imagen*/
+    box-shadow: 0 0 2.5rem var(--main-color); /*sombreado de 25px a todos lados*/
+    cursor: pointer; /*puntero*/
+    transition: .4s ease; /*la animacion va ser suave a todas partes*/
+    animation: floatImage 4s ease-in-out infinite; /*aplica una animación llamada floatImage a un elemento, haciendo que la animación dure 4 segundos, con una aceleración y desaceleración suave, y se repetirá sin fin.*/
+    
+}
+
+@media(max-width: 1200px){ /*hasta 1200px*/
+	.about-img{
+		text-align: center; /*centra la imagen*/
+	}
+	
+	.about img{
+		order: 1; /*para q se posicione primero*/
+		animation: none; /*sin animacion*/
+	}
+}
+
+@media(max-width: 992px){ /*hasta 992px*/
+	.about img{
+		width: 50%;
+	}
+}
+
+@media(max-width: 768px){ /*de 0 a 768px*/
+	.about img{
+		width: 60%;
+	}
+}
+
+.about-img img:hover{
+    box-shadow: 0 0 2.5rem var(--main-color),
+                0 0 3.5rem var(--main-color), /*escala de tamaño 25px*/
+                0 0 4.5rem var(--main-color); /*escala de tamaño 45px*/
+}
+
+/* podemos definir q se apliquen diferentes estilos a lo largo del tiempo */
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2.4rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.about-content{
+    padding: 0 4rem;
+}
+
+@media(max-width: 1200px){ /*hasta 1200px*/
+	.about-content{
+		order: 2;
+		text-align: center; /*centra el texto*/
+		padding: 0 1rem;
+	}
+}
+
+.about-content h2{
+    line-height: 1.2; /*interlineado*/
+}
+
+.about-content h3{
+    font-size: 3rem; /*tamaño de letra*/
+}
+.about-content p{
+    margin: 2rem 0 3rem;
+}
+
+/* HABILIDADES */
+.skills h3{
+    display: inline-flex; /* para q sea flexible y este en linea es decir q abarque solo su espacio */
+    margin-bottom: 2rem; /*20px*/
+    border-bottom: .2rem solid var(--main-color);
+}
+
+.content-skills{
+    display: flex; /*flexble*/
+    flex-wrap: wrap; /*para q los elemetos q no entran se acomoden en otra linea*/
+    gap: 2rem; /*espaciado entre elementos*/
+    text-align: center;
+}
+.item-skill span,
+.item-skill i{
+    display: block; /*para q abarque todo el bloque*/
+    color: var(--text-color);
+    font-weight: 600; /*negrita*/
+}
+
+.item-skill{
+    padding: 1rem; /*10px*/
+}
+
+.item-skill i{
+    font-size: 5rem; /*50px tamaño de letra*/
+}
+
+/* Services content */
+
+.services h2{
+    margin-bottom: 2rem; /*20px*/
+}
+
+.services-content{
+    display: flex; /*flexible*/
+    flex-wrap: wrap; /*para q los elemetos q no entran se acomoden en otra linea*/
+    justify-content: center; /*centra el contenido*/
+    align-items: stretch; /*estira los elementos*/
+    gap: 2rem; /*espaciado entre elementos*/
+}
+
+/*podemos ocupar las 3 propiedades en una sola linea en este orden(flex-grow, flex-shrink,flex-basis)*/
+.service-item{
+    flex: 1 1 30rem; /*no respete el ancho para abarcar todo el contenedor, reduce su tamaño para que no vea desbordamiento, ancho*/
+    background-color: var(--second-bg-color);
+    padding: 6rem 2rem 6rem;
+    border-radius: 2rem; /*borde redondeado 20px*/
+    box-shadow: 0 0 .5rem var(--main-color); /*sombreado*/
+    transition: all .5s ease; /*transicion suave*/
+    /* all | se aplica a todos 
+    ease | suave*/
+}
+
+.service-item:hover{
+    outline: .1rem solid var(--main-color); /*outline similar a un borde*/
+    cursor: pointer; /*manito*/
+    transform: translateY(-.5rem) scale(1.02); /*traslada hacia arriba y acerca el item*/
+}
+
+.service-item i{
+    font-size: 6rem; /*tamaño letra*/
+    color: var(--main-color);
+}
+
+.service-item h3{
+    font-size: 3rem; /*tamaño letra*/
+    font-weight: 700; /*negrita*/
+    margin: 1rem 0;
+}
+
+.service-item p{
+    margin: 1rem 0;
+}
+
+.btn-now{
+    display: inline-block; /*para darle las propiedades del block(width, height, padding) aun siendo inline. Evita q se sobreponga en el p*/
+    font-size: 2.2rem;
+    line-height: 1.2rem; /*interlineado*/
+    font-weight: 700; /*negrita*/
+    padding: .7rem 0;
+    color: var(--text-color);
+    border-bottom: .2rem solid var(--other-color);
+}
+
+.btn-now i{
+    vertical-align: middle; /* para que se alinee al medio */
+    font-size: 2.5rem;
+    margin-left: .5rem;
+}
+
+.btn-now:hover{
+    border-bottom-color: var(--main-color); /*cambia el color del borde*/
+}
+
+/* PORTAFOLIO */
+.portfolio{
+    background-color: var(--second-bg-color);
+}
+
+.portfolio-content{
+    display: flex; /*flexible*/
+    flex-wrap: wrap; /*para que baje a otra linea si no entran todos los elementos*/
+    align-items: center; /*align-items | los elementos ocupan el espacio necesario de su contenedor*/
+    gap: 4rem; /* para añadir espaciado entre elementos */
+    margin-top: 4rem;
+}
+
+/* divide entre 3 el 90% del contenedor */
+.portfolio-item{
+    /*width: calc(90%/3);*/ /* divide entre 3 el 90% del contenedor */
+    flex: 1 1 30rem; 
+    /*podemos ocupar las 3 propiedades en una sola linea en este orden(flex-grow(abarca todo el contenedor), flex-shrink(reduce su tamaño para q no vea desbordamiento),flex-basis(ancho base))*/
+    background-color: var(--bg-color);
+    border-radius: 1rem;
+    border: .1rem solid transparent;
+    padding: 2rem;
+    box-shadow: 0 0 .5rem var(--main-color); /*sombreado*/
+    transition: all .5s ease; /*transicion suave de 5s*/
+}
+
+.portfolio-item:hover{
+    outline: .1rem solid var(--main-color); /* para q aparezca una linea a los lados */
+    cursor: pointer;
+    transform: translateY(-.5rem) scale(1.02); /*traslada hacia arriba y acerca el item*/
+}
+
+.portfolio-item img{
+    display: inline-block;
+    height: auto;
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-header{
+    display: flex; /*flexible*/
+    align-items: center; /*centra verticalmente*/
+    justify-content: space-between; /*justifica los elementos con espaciado entre elementos*/
+    margin-bottom: .5rem;
+}
+
+.portfolio-header h4{
+    font-size: 2rem; /*tamaño letra*/
+    font-weight: 700; /*negrita*/
+    margin-bottom: 1rem;
+    line-height: 1.4rem; /*interlineado*/
+}
+
+.portfolio-header a{
+    display: inline-flex; /*flexible*/
+    font-size: 2.5rem; /*tamaño letra*/
+    border-radius: 50%; /*redondeado*/
+    padding: .5rem;
+    color: var(--text-color); /*color texto*/
+    background-color: var(--main-color);
+}
+
+.portfolio-header a:hover{
+    color: var(--main-color);
+    background-color: var(--text-color);
+}
+.portfolio-item p{
+    margin-bottom: 2rem;
+}
+
+/* CONTACTO */
+
+.contact{
+    background-color: var(--bg-color);
+}
+
+.contact-content{
+    display: flex; /*flexible*/
+    gap: 6rem; /*60px de espaciado entre elementos*/
+    padding: 2rem 0;
+}
+
+.img-contact{
+    width: 50%; /*ancho del contenedor*/
+}
+
+.img-contact img{
+    width: 100%; /*abarca el 100% del contenedor*/
+    height: 58rem;
+}
+
+@media(max-width: 992px){ /*hasta 992px*/
+    .img-contact{ 
+        display: none; /*quita el contenido y la imagen*/
+    }
+}
+
+.contact form{
+    width: 50%;
+    margin: 1rem auto;
+    display: flex; /*flexible*/
+    flex-direction: column; /*direccion*/
+    justify-content: center; /*centra verticalmente porque esta en column*/
+    border-radius: 2rem;
+    border: .2rem solid var(--main-color);
+    padding: 2rem 3rem;
+    transition: all .3s ease; /*transicion suave a todos los elementos*/
+}
+
+.contact form:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+@media(max-width: 1200px){ /*hasta 1200px*/
+    .contact form{
+        width: 50%;
+    }
+}
+
+@media(max-width: 992px){ /*hasta 992px*/
+    .contact form{
+        width: 100%;
+    }
+}
+
+form input,
+form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: var(--second-bg-color);
+    border-bottom: 0.25rem solid var(--main-color); /*borde abajo*/
+    border-radius: 0.8rem 0.8rem 0 0; /*borde redondeado arriba*/
+    margin: 0.7rem 0;   
+}
+
+form textarea{
+    margin-bottom: 2rem;
+}
+
+.btn-submit{
+    display: flex; /*flexible*/
+    justify-content: center;
+}
+
+.btn-submit .btn{
+    width: auto;
+    cursor: pointer;
+}
+
+form input:focus,
+form textarea:focus{
+    outline: none; /*quita la linea q tenia por defecto*/
+    box-shadow: 0 0.2rem 0.2rem -0.1rem var(--main-color); /*añade sombreado abajo*/
+}
+
+/* FOOTER */
+
+.footer{
+    background-color: var(--second-bg-color); 
+    padding: 40px 0;
+    text-align: center; /*centra el texto*/
+    border-top: 0.2rem solid var(--main-color);
+}
+
+.footer-content{
+    display: flex; /*flexible*/
+    align-items: center; /*alinea los items en el centro horizontalmente*/
+    justify-content: space-around; /* space-around | Justifica los elementos con espaciado entre los elementos. Tambien añade un poco de espaciado al principio y al final*/
+}
+
+.arrow a{
+    display: inline-flex;
+    color: var(--main-color);
+    border: 0.2rem solid var(--main-color);
+    font-size: 3rem; /*tamaño de letra*/
+    padding: 1rem;
+    border-radius: 2rem; /*borde redondeado*/
+    transition: 0.3s ease; /*transicion suave*/
+}
+
+.arrow a:hover{
+    box-shadow: 0 0 2.5rem var(--main-color); /*sombreado*/
+    transform: scale(1.1) translateY(-1rem); /*acerca la imagen y sube hacia arriba*/
+}
+
+.footer p{
+    color: var(--text-color);
+}
+
+/*Tamaño estandar para media queries
+	extra small | <576px
+	small | >=576px
+	medium | >=768px
+	large | >=992px
+	extra large | >=1200px
+	extra extra large | >= 1400px*/

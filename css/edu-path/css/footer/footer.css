@@ -1,0 +1,159 @@
+.footer{
+	background-color: var(--color-950);
+	padding: 3rem 0;
+	color: var(--color-100);
+	line-height: 1.6; /*intelineado*/
+	position: relative;
+}
+
+.footer__container{
+	display: grid; /*cuadricula*/
+	gap: 2rem; /*espaciado entre elementos*/
+}
+
+@media (min-width: 768px){
+	.footer__container{
+		grid-template-columns: repeat(2, 1fr); /*dos columnas*/
+	}
+}
+
+@media (min-width: 1200px){
+	.footer__container{
+		grid-template-columns: 35rem repeat(4, 1fr); /*5 columnas*/
+		align-items: start; /*alinea los elementos al inicio*/
+	}
+}
+
+.footer__brand{
+	text-align: center; /*centra el texto*/
+	display: grid; /*cuadricula*/
+	place-items: center; /*centra horizontal*/
+	gap: 2rem; /*espaciado entre elementos*/
+}
+
+@media(min-width: 768px){
+	.footer__brand{
+		grid-column: 2 span; /*junta dos columnas*/
+	}
+}
+
+@media(min-width: 1200px){
+	.footer__brand{
+		grid-column: auto; 
+	}
+}
+
+.footer__logo{
+	color: var(--color-main);
+}
+
+.footer__logo:hover{
+	color: var(--color-400);
+}
+
+.footer__slogan{
+	font-style: italic; /*cursiva*/
+	color: var(--color-300);
+	margin: 0;
+}
+
+.footer__social{
+	display: flex; /*flexible*/
+	gap: 2rem;
+	justify-content: center;
+}
+
+.footer__social-link{
+	color: var(--color-main);
+	display: inline-flex;
+	padding: 0.5rem;
+	background-color: var(--color-800);
+	border-radius: 1rem;
+}
+
+.footer__social-link:hover{
+	color: var(--color-100);
+}
+
+.footer__nav{
+	text-align: center;
+}
+
+@media(min-width: 768px){ /*mediano-grande*/
+	.footer__nav{
+	   text-align: start; /*alinea el texto al inicio*/
+  }
+}
+
+.footer__nav-title{
+	font-size: 2rem;
+	font-weight: 500; /*negrita*/
+}
+
+.footer__nav-list{
+	list-style: none; /*quita los puntos de la lista*/
+	padding: 0;
+	display: grid; /*cuadricula*/
+	gap: 1rem; /*espaciado entre elemetos*/
+}
+
+.footer__nav-link{
+	color: var(--color-300);
+	font-weight: 500; /*negrita*/
+}
+
+.footer__nav-link:hover{
+	color: var(--color-main);
+}
+
+.footer__contact{
+	display: grid; /*cuadricula*/
+	gap: 2rem; /*espaciado entre elementos*/
+	margin: auto 0;
+}
+
+.footer__contact-link{
+	color: var(--color-main);
+	background-color: var(--color-800);
+	display: inline-flex; /*flexible*/
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	padding: 1rem;
+	border-radius: 1rem;
+	font-size: 1.6rem;
+	border: 2px solid var(--color-main);
+	transition: 0.3s ease; /*transicion suave*/
+	font-weight: 500; /*negrita*/
+}
+
+.footer__contact-link:hover{
+	color: var(--color-300);
+}
+
+.footer__copyright{
+	color: var(--color-300);
+	text-align: center;
+}
+
+.footer__back{
+	color: var(--color-300);
+	background-color: var(--color-800);
+	display: inline-flex; /*flexible*/
+	padding: 1rem;
+	border-radius: 1rem;
+	transition: 0.3s ease; /*transicion suave*/
+	position: absolute;
+	right: 10px;
+	bottom: 40px;
+}
+
+.footer__back-icon{
+	font-size: 2.5rem; /*tamaño icono*/
+}
+
+.footer__back:hover{
+	color: var(--color-900);
+	background-color: var(--color-main);
+	box-shadow: 0 0 3px var(--color-main);
+}

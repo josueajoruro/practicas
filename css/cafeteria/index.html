@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafetería - Don Pedrito</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="assets/boxicons-2.1.4/css/boxicons.min.css" />
+    <!--iconos-->
+  </head>
+  <body>
+    <header class="header">
+      <video autoplay muted loop id="bg-video">
+        <!--autoplay | reproducción automática 
+    		muted | muteado 
+    		loop | repetir varia veces-->
+        <source src="assets/videos/welcome-video.webm" type="video/webm" />
+        <!--1ra opcion-->
+        <source src="assets/videos/welcome-video.mp4" type="video/mp4" />
+        <!--2da opcion por si el navegador no soporta el primer archivo-->
+        Tu navegador no soporta videos HTML5.
+      </video>
+      <div class="header-logo">
+        <h1>Café Don Pedrito</h1>
+        <h2>LA CAFETERÍA</h2>
+      </div>
+      <nav class="navbar">
+        <a href="#">Inicio</a>
+        <a href="#">Servicios</a>
+        <a href="#">Blog</a>
+        <a href="#">Contactos</a>
+      </nav>
+
+      <section class="welcome">
+        <div class="container">
+          <div class="welcome-content">
+            <h2>
+              <span>DÉJATE SORPRENDER</span>
+              <span>TE GUSTARÁ</span>
+            </h2>
+            <p>
+              Trabajamos solo con los mejores ingredientes. Una vez lo pruebes,
+              nuestro café será la mejor forma de empezar tu rutina diaria.
+            </p>
+            <div class="welcome-btn">
+              <a href="#" class="btn">Visitanos</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <section class="best-sellers">
+      <div class="container">
+        <h2 class="title2">Los más vendidos</h2>
+
+        <div class="best-sellers-content">
+          <div class="best-sellers-item">
+            <h3>Café expresso del valle Hayes</h3>
+            <img src="assets/images/pro1.jpg" alt="Imagen de producto" />
+            <p>Chocolate amargo, melaza, malta tostado</p>
+            <a href="#" class="btn">Áñadir al carrito $10</a>
+          </div>
+          <div class="best-sellers-item">
+            <h3>Café expresso del valle Hayes</h3>
+            <img src="assets/images/pro2.jpg" alt="Imagen de producto" />
+            <p>Chocolate amargo, melaza, malta tostado</p>
+            <a href="#" class="btn">Áñadir al carrito $10</a>
+          </div>
+          <div class="best-sellers-item">
+            <h3>Café expresso del valle Hayes</h3>
+            <img src="assets/images/pro3.jpg" alt="Imagen de producto" />
+            <p>Chocolate amargo, melaza, malta tostado</p>
+            <a href="#" class="btn">Áñadir al carrito $10</a>
+          </div>
+          <div class="best-sellers-item">
+            <h3>Café expresso del valle Hayes</h3>
+            <img src="assets/images/pro4.jpg" alt="Imagen de producto" />
+            <p>Chocolate amargo, melaza, malta tostado</p>
+            <a href="#" class="btn">Áñadir al carrito $10</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="new-product">
+      <div class="container">
+        <div class="product-content">
+          <picture>
+            <source
+              media="(max-width: 992px)"
+              srcset="assets/images/new-pro-verical.webp"
+            />
+            <img src="assets/images/new-pro.webp" alt="Imagen de nuevo producto" />
+            <!--imagen por defecto-->
+          </picture>
+
+          <div class="product-info">
+            <h3 class="title2">Presentamos la energía helada</h3>
+            <p>
+              Mejora tu día con un poderoso impulso de energía sin azúcar
+              elaborado con sabores de frutas brillantes y té helado.
+              (Disponible solo Venti).
+            </p>
+            <a href="#" class="btn">Ordenar ahora</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu">
+      <h2 class="title2">Menú</h2>
+      <div class="container">
+        <div class="menu-content">
+          <div class="menu-content2">
+            <article>
+              <h5>Para Tomar</h5>
+              <div class="menu-item">
+                <h6 class="name">Lorem, ipsum dolor sit amet</h6>
+                <p class="price">$10</p>
+                <p class="desc">
+                  Lorem, ipsum dolor sit amet consectetur adisiciping elit.
+                  Repellat at sunt perferendis exercitarionem dolorem.
+                </p>
+              </div>
+              <div class="menu-item">
+                <h6 class="name">Lorem, ipsum dolor sit amet</h6>
+                <p class="price">$10</p>
+                <p class="desc">
+                  Lorem, ipsum dolor sit amet consectetur adisiciping elit.
+                  Repellat at sunt perferendis exercitarionem dolorem.
+                </p>
+              </div>
+              <div class="menu-item">
+                <h6 class="name">Lorem, ipsum dolor sit amet</h6>
+                <p class="price">$10</p>
+                <p class="desc">
+                  Lorem, ipsum dolor sit amet consectetur adisiciping elit.
+                  Repellat at sunt perferendis exercitarionem dolorem.
+                </p>
+              </div>
+              <div class="menu-item">
+                <h6 class="name">Lorem, ipsum dolor sit amet</h6>
+                <p class="price">$10</p>
+                <p class="desc">
+                  Lorem, ipsum dolor sit amet consectetur adisiciping elit.
+                  Repellat at sunt perferendis exercitarionem dolorem.
+                </p>
+              </div>
+            </article>
+
+            <article>
+              <h5>Para Comer</h5>
+              <div class="menu-item">
+                <h6 class="name">Lorem, ipsum dolor sit amet</h6>
+                <p class="price">$10</p>
+                <p class="desc">
+                  Lorem, ipsum dolor sit amet consectetur adisiciping elit.
+                  Repellat at sunt perferendis exercitarionem dolorem.
+                </p>
+              </div>
+              <div class="menu-item">
+                <h6 class="name">Lorem, ipsum dolor sit amet</h6>
+                <p class="price">$10</p>
+                <p class="desc">
+                  Lorem, ipsum dolor sit amet consectetur adisiciping elit.
+                  Repellat at sunt perferendis exercitarionem dolorem.
+                </p>
+              </div>
+              <div class="menu-item">
+                <h6 class="name">Lorem, ipsum dolor sit amet</h6>
+                <p class="price">$10</p>
+                <p class="desc">
+                  Lorem, ipsum dolor sit amet consectetur adisiciping elit.
+                  Repellat at sunt perferendis exercitarionem dolorem.
+                </p>
+              </div>
+              <div class="menu-item">
+                <h6 class="name">Lorem, ipsum dolor sit amet</h6>
+                <p class="price">$10</p>
+                <p class="desc">
+                  Lorem, ipsum dolor sit amet consectetur adisiciping elit.
+                  Repellat at sunt perferendis exercitarionem dolorem.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallerry">
+      <img src="assets/images/2.jpg" alt="Imagen de Cafetería" />
+      <img src="assets/images/4.jpg" alt="Imagen de Cafetería" />
+      <img src="assets/images/5.jpg" alt="Imagen de Cafetería" />
+      <img src="assets/images/7.jpg" alt="Imagen de Cafetería" />
+      <img src="assets/images/pro1.jpg" alt="Imagen de Cafetería" />
+      <img src="assets/images/pro2.jpg" alt="Imagen de Cafetería" />
+      <img src="assets/images/pro3.jpg" alt="Imagen de Cafetería" />
+      <img src="assets/images/pro4.jpg" alt="Imagen de Cafetería" />
+    </section>
+
+    <section class="location">
+      <div class="container">
+        <h2 class="title2">Ubicación</h2>
+        <div class="location-content">
+          <address class="address">
+            <h3>Dirección</h3>
+            <p>Pari, Santa Cruz, Bolivia</p>
+            <p>Teléfono: <a href="tel:+59173180745">(591) 731-80-745</a></p>
+            <!-- tel | para q llame al dar click -->
+            <p>
+              Email:
+              <a href="mailto:cafedonpedrito@gmail.com">cafedonpedrito@gmail.com</a>
+            </p>
+            <!-- mailto | envia al correo para enviar mensaje -->
+          </address>
+          <section class="schedules">
+            <h3>Horarios</h3>
+            <ul>
+              <li>Lunes - Viernes: 8:00 AM - 8:00 PM</li>
+              <li>Sábado 9:00 AM - 6:00 PM</li>
+              <li>Domingo: 9:00 AM - 4:00 PM</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3799.159720732594!2d-63.18482589036906!3d-17.784189075019107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e988a71e527d%3A0x44de583314bf5b6e!2sPlaza%20Metropolitana%2024%20de%20Septiembre!5e0!3m2!1ses!2sbo!4v1756069303978!5m2!1ses!2sbo"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h2>- CAFÉ DON PEDRITO -</h2>
+            <p class="desc">LA CAFETERÍA</p>
+          </div>
+          <div class="social-media">
+            <a href="#"><i class="bx bxl-facebook"></i></a>
+            <a href="#"><i class="bx bxl-instagram"></i></a>
+            <a href="#"><i class="bx bxl-tiktok"></i></a>
+            <a href="#"><i class="bx bxl-youtube"></i></a>
+            <a href="#"><i class="bx bxl-pinterest"></i></a>
+            <a href="#"><i class="bx bxl-twitter"></i></a>
+          </div>
+          <div class="footer-about">
+            <h3>Sobre nosotros</h3>
+            <ul>
+              <li><a href="#">Nuestro café</a></li>
+              <li><a href="#">Historias y blogs</a></li>
+              <li><a href="#">Servicio al cliente</a></li>
+              <li><a href="#">Contáctanos</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-other">
+            <h3>Avisos legales</h3>
+            <ul>
+              <li><a href="#">Aviso de privacidad</a></li>
+              <li><a href="#">Condiciones de uso</a></li>
+              <li><a href="#">Accesibilidad</a></li>
+              <li><a href="#">Cookies</a></li>
+            </ul>
+          </div>
+          <p class="footer-text">&copy; 2025 Cafetería Don Pedrito.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

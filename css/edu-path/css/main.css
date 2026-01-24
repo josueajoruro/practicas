@@ -1,0 +1,11 @@
+/*@import "base.css"; | primera manera de importar un css*/
+@import url(base.css);
+@import url(header/header.css);
+@import url(header/header__navbar.css);
+@import url(header/header__intro.css);
+@import url(overview/overview__stats.css);
+@import url(overview/overview__education.css);
+@import url(courses/courses.css);
+@import url(plans/plans.css);
+@import url(testimonials/testimonials.css);
+@import url(footer/footer.css);

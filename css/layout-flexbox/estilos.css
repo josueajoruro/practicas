@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+/* CSS Document */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: #000 url('imagenes/fondo.jpg');
+	background-size: cover;
+	/*cover | para que abarque el 100% de la página*/
+	background-attachment: fixed;
+	/*Hace que una imagen de fondo se muestre fija*/
+}
+
+.contenedor {
+	margin: auto;
+	/*centra la pagina*/
+	width: 90%;
+	max-width: 1000px;
+	display: flex;
+	flex-direction: row;
+	/*pone los elementos uno al lado del otro*/
+	flex-wrap: wrap;
+	/*pone a los elementos que no caben abajo*/
+}
+
+header {
+	width: 100%;
+	padding: 50px 0;
+	display: flex;
+	flex-direction: row;
+	/*direcciona horizontalmente*/
+	justify-content: space-between;
+	/*inserta espacio entre el logo y el menu*/
+	align-items: center;
+	/*centra el contenido verticalmente*/
+}
+
+header .menu a {
+	color: #fff;
+	text-decoration: none;
+	margin-right: 40px;
+	font-size: 18px;
+}
+
+header .menu a:hover {
+	text-decoration: underline;
+	/*subrayado*/
+}
+
+.main {
+	background: #fff;
+	padding: 20px;
+	width: 70%;
+}
+
+.main article .thumb {
+	margin-bottom: 20px;
+}
+
+.main article .thumb img {
+	width: 100%;
+	vertical-align: top;
+	/*elimina el espacio sobrante*/
+}
+
+.main article h2 {
+	margin-bottom: 20px;
+	font-weight: normal;
+	/*quita la negrita*/
+	font-size: 32px;
+}
+
+.main article p {
+	margin-bottom: 20px;
+	font-size: 14px;
+	line-height: 27px;
+	/*interlineado*/
+}
+
+aside {
+	width: 30%;
+	background: #537dca;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	/*pone el espacio sobrante en medio de las dos cajas*/
+}
+
+aside .ad {
+	font-size: 30px;
+	text-align: center;
+	color: #fff;
+	padding: 50px 0;
+	background: #4264a2;
+}
+
+footer {
+	margin: 20px 0;
+	background: rgba(255, 255, 255, .2);
+	padding: 20px;
+	width: 100%;
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: no-wrap;
+	justify-content: space-between;
+}
+
+footer .redes-sociales a {
+	color: #fff;
+	text-decoration: underline;
+	margin-left: 20px;
+}
+
+footer .redes-sociales a:hover {
+	text-decoration: none;
+}
+
+@media screen and (max-width: 800px) { /* hasta los 800px se aplican estos estilos*/
+	.main {
+		width: 100%;
+	}
+
+	aside {
+		width: 100%;
+		flex-direction: row;
+	}
+
+	aside .ad {
+		width: 40%;
+	}
+}
+
+@media screen and (max-width: 600px) { /* hasta los 600px se aplican estos estilos*/
+	header {
+		flex-direction: column;
+		padding-bottom: 20px;
+	}
+
+	header .menu {
+		width: 100%;
+		background: rgba(255, 255, 255, .2);
+		text-align: center;
+		padding: 20px;
+	}
+
+	header .menu a {
+		margin: 0 20px;
+	}
+
+	header .logo {
+		margin-bottom: 20px;
+	}
+
+	footer {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	footer .autor {
+		order: 2;
+	}
+
+	footer .redes-sociales {
+		order: 1;
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 400px) { /* hasta los 400px se aplican estos estilos*/
+	aside {
+		display: none;
+		/*hace desaparecer el aside*/
+	}
+}
