@@ -41,6 +41,6 @@ Prácticas de diseño utilitario y personalización.
 | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | [dark-mode](https://github.com/josueajoruro/practicas/tree/main/tailwind/dark-mode)   | [Live Demo](https://josueajoruro.github.io/practicas/tailwind/dark-mode/src/)  |
 | [formulario](https://github.com/josueajoruro/practicas/tree/main/tailwind/formulario) | [Live Demo](https://josueajoruro.github.io/practicas/tailwind/formulario/src/) |
-| [landing](https://github.com/josueajoruro/practicas/tree/main/tailwind/landing)       | [Live Demo](https://josueajoruro.github.io/practicas/tailwind/landing/src/)    |
+| [landing](https://github.com/josueajoruro/practicas/tree/main/tailwind/landing)       | [Live Demo](https://josueajoruro.github.io/practicas/tailwind/landing/)    |
 | [website](https://github.com/josueajoruro/practicas/tree/main/tailwind/website)       | [Live Demo](https://josueajoruro.github.io/practicas/tailwind/website/src/)    |
 
